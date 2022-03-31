@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Page</title>
+    <style>
+      #signupForm {
+        display: block;
+        box-sizing: border-box;
+        width: 40%;
+        height: auto;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        margin: 3% auto;
+        font-size: 20px;
+        padding-left: 20px;
+      }
+      #signupForm > h1 {
+        background-color: rgba(255, 0, 0, 0.953);
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 500;
+        margin-left: -20px;
+        text-align: center;
+        margin-top: 0px;
+      }
+      #signupForm >input {
+        width: 90%;
+
+        font-size: 20px;
+        padding: 2%;
+        display: block;
+      }
+      #signupSubmit {
+        background-color: rgba(255, 0, 0, 0.975);
+        color: #ffffff;
+        cursor: pointer;
+      }
+      #signupSubmit:hover{
+        background-color: rgb(120, 12, 12);
+      }
+      @media all  and (max-width:419px){
+       
+        #signupForm{
+         width: 100%;
+       }
+     
+      }
+      @media all and (min-width:420px) and (max-width:780px){
+       
+        #signupForm{
+         width: 80%;
+       }
+      }
+      @media all and (min-width:781px) and (max-width:1200px){
+       
+        #signupForm{
+         width: 60%;
+       }
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="signupForm" >
+      <h1>Create New Account</h1>
+      <input type="text" id="name" placeholder="Enter your Name" />
+      <label for="">Email</label>
+      <input type="email" id="email" />
+      <label for="">Mobile</label>
+      <input type="Number" id="mobile" />
+      <!-- <input type="Checkbox" id="checkbox">
+        <span>
+            <label for="">Sign Up for Newsletter</label>
+        </span><br> -->
+      <label for="">Password</label>
+      <input type="password" id="password" />
+      <label for="">Confirm Password</label>
+      <input type="password" id="conPass"/><br />
+      <input type="submit" id="signupSubmit" value="CREATE AN ACCOUNT" />
+      <p><a href="index.html">back</a> </p>
+    </form>
+  </body>
+  <script>
+        document.querySelector("#signupForm").addEventListener("submit",signUpFun);
+let signupData=JSON.parse(localStorage.getItem("userDetails"))  ||[];
+//  console.log(signupData)
+
+        function signUpFun(){
+          event.preventDefault();
+          let signupObj={
+           name:document.querySelector("#name").value,
+           email:document.querySelector("#email").value,
+           mobile:document.querySelector("#mobile").value,
+           password:document.querySelector("#password").value,
+           confirmPassword:document.querySelector("#conPass").value,
+          }
+          // console.log(signupObj)
+signupData.push(signupObj);
+// console.log(signupData);
+localStorage.setItem("userDetails", JSON.stringify(signupData));
+
+alert("Your Account has been succeesfully created Go to the login Page");
+window.location.href="login.html"
+        }
+        
+  </script>
+</html>
