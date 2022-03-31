@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #recipient_man_container{
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+         grid-template-rows: auto;
+         gap: 30px;
+         margin: auto;
+         margin-left: 50px;
+        }
+        #image{
+          height: 100px;
+          width: 100px;
+        }
+        #box1{
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: -20px;
+        }
+        #box{
+          height:40%;
+          width: 20%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        img{
+             height: 200px;
+             width: 100%;
+             margin-bottom: 20px;
+         }
+         #upper{
+            
+             position: relative;
+             text-align: center;
+             color:black;
+         }
+         .sub1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+           font-weight: bold;
+         }
+         .sub2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 25px;
+         }
+    </style>
+</head>
+<body>
+  <div id="upper">
+    <img src="https://www.giftcart.com/pub/media/catattributes/default/new.jpg" alt=""/>
+    <div class="sub1">ALL GIFTS</div>
+     <div class="sub2">Home / All Gifts</div>
+</div>
+    <div id="recipient_man_container"></div>
+</body>
+</html>
+
+<script>
+
+    var mensdata=[
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm03gbgt1888-1.jpg",
+      name: "Personalised Parenthood Magazine Cover ",
+      price: "99",
+      strikedoffprice: "₹199.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt3712-0.jpg",
+      name: "Ganesha Rock Slate and Teal Light Combo ",
+      price: "849",
+      strikedoffprice: "₹1,099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm02gbgt0881-0.jpg",
+      name: "Go Nuts in Love",
+      price: "1399",
+       strikedoffprice: "₹1,599.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm02gbgt1063-1_1.jpg",
+      name: "In Your Memory Mug",
+      price: "225",
+       strikedoffprice: "₹399.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm02gbgt1217-1_1.jpg",
+      name: "Personalised Let's Do CHIT-CHAT",
+      price: "499",
+        strikedoffprice: "₹699.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm02gbgt0027-0.jpg",
+      name: "Chocolates in Handmade Tray",
+      price: "999",
+        strikedoffprice: "₹1399.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm02gbgt0028-1-0.jpg",
+      name: "Chocolates in Wooden Tray",
+      price: "1699",
+       strikedoffprice: "₹1,799.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm02gbgt0040-2-0.jpg",
+      name: "Chips Dressings & Nachos Combo",
+      price: "1099",
+        strikedoffprice: "₹1,299.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm02kvpa0009-0.jpg",
+      name: "John Lennon Lamp",
+      price: "749",
+       strikedoffprice: "₹899.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm03gbgt0939-0.jpg",
+      name: "Decorative Star and Sticks with Chocolate In Cage",
+      price: "749",
+        strikedoffprice: "₹849.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm03gbgt1122-1.jpg",
+      name: "Candies Delight",
+      price: "824",
+         strikedoffprice: "₹849.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm03gbgt1410.jpg",
+      name: "Personalised Birthday Card",
+      price: "199",
+         strikedoffprice: "₹249.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/o/co-cm01gbgt1333.jpg",
+      name: "Personalised Candle Friendship Card",
+      price: "199",
+         strikedoffprice: "₹249.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/o/co-cm01gbgt1449-0.jpg",
+      name: "Personalised Multicolour Cushion And Candle Combo",
+      price: "1299",
+         strikedoffprice: "₹1,399.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm01gbgt1525-round-01.jpg",
+      name: "Personalised Cuppycake Clock",
+      price: "599",
+          strikedoffprice: "₹809.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/o/co-cm01gbgt1389-0.jpg",
+      name: "Personalised Golden Age Birthday Card",
+      price: "199",
+         strikedoffprice: "₹249.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/o/co-cm01gbgt1334-0.jpg",
+      name: "Personalised Group Friendship Card",
+      price: "199",
+         strikedoffprice: "₹249.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm03gbgt0942-0.jpg",
+      name: "Ornamented X-Mas Tree with Ferrero Rocher",
+      price: "199",
+         strikedoffprice: "₹1,099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm02kvpa0048-0.jpg",
+      name: "Floral Colours Bottle Key Hanger",
+      price: "499",
+         strikedoffprice: "₹649.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    }
+
+    ]
+
+
+    var cartData=JSON.parse(localStorage.getItem("cart1")) || []
+
+
+        mensdata.map(function(elem){
+        var box=document.createElement("div")
+        // box.style.height="400px";
+        //  box.style.width="80%"
+         box.style.boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px";
+      //  box.setAttribute("id","box")
+
+
+        var image=document.createElement("img")
+        image.src=elem.image_url
+        image.style.height="280px"
+        // image.style.marginLeft="-20px"
+        image.style.width="270px"
+        image.style.marginLeft="35px"
+
+      
+        // box.setAttribute("id","image")
+
+        var name=document.createElement("p")
+        name.innerText=elem.name
+        name.style.marginLeft="30PX"
+        name.style.fontSize="20px"
+
+        var box1=document.createElement("div")
+        box1.setAttribute("id","box1")
+        
+        var mrp=document.createElement("p")
+        mrp.innerText="MRP(incl GST)"
+        mrp.style.marginTop="20px"
+
+        var price=document.createElement("p")
+        price.innerText=elem.price
+        price.style.fontSize="20px"
+        price.style.color="red"
+        price.style.marginLeft="-40px"
+
+        var strikedoffprice=document.createElement("p")
+        strikedoffprice.innerText=elem.strikedoffprice
+        strikedoffprice.style.textDecoration="line-Through"
+        strikedoffprice.style.color="gray"
+        
+
+        var rating=document.createElement("img")
+        // box.setAttribute("id","rating")
+        rating.src=elem.rating
+        rating.style.height="30px"
+        rating.style.width="130px"
+        // rating.style.marginTop="0px"
+
+
+        var btn = document.createElement("button");
+        btn.innerText = "Add to Cart";
+        btn.style.marginBottom="30px"
+        btn.style.marginTop="-50px"
+        btn.style.marginLeft="50px"
+        btn.style.backgroundColor="red"
+        btn.style.color="white"
+        btn.addEventListener("click", function () {
+        addToCart(elem);
+        });
+        
+        box1.append(mrp,price,strikedoffprice)
+        box.append(image,name,box1,rating,btn)
+        document.querySelector("#recipient_man_container").append(box)
+
+    })
+
+function addToCart(elem) {
+    console.log(elem);
+    cartData.push(elem);
+    localStorage.setItem("cart1", JSON.stringify(cartData));
+    alert("item added to cart");
+  }
+
+
+
+
+
+ 
+
+  
+
+</script>
