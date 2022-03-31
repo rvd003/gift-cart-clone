@@ -1,10 +1,11 @@
 .top
 {
-    border: 1px;
+    border: 1px  black;
     height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .top>div
@@ -21,7 +22,7 @@
 
 .subDiv1>div
 {
-    border: 1px solid gray;
+    border: 1px dotted  gray;
     align-self: center;
     padding: 15px;
     color: #999;
@@ -40,23 +41,20 @@
 }
 .subDiv2>div
 {
-    border: 1px solid green;
+    border: 8px  green;
     align-self: center;
     padding: 15px   
 }
 
 .dropbtn {
-    /* background-color: #999; */
-    /* color: #999; */
+    
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
   }
   
-  .dropbtn:hover, .dropbtn:focus {
-    /* background-color: #999; */
-  }
+ 
   
   .dropdown {
     position: relative;
@@ -175,7 +173,7 @@ a>span
 
   #searchBar
   {
-      border: 1px solid brown;
+      border: 1px  brown;
       display: grid;
       /* grid-template-columns: 500px 800px 200px ; */
       grid-template-columns: 0.5fr 1fr 0.5fr;
@@ -184,7 +182,7 @@ a>span
 
   .items
   {
-      border: 1px solid black;
+      border: 1px  black;
       height: 100px;
       text-align: center;
   }
@@ -195,10 +193,40 @@ a>span
       padding: 12px 100px;
       
   }
+
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    z-index: 1;
+    background-color: red;
+    color: white;
+    left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
   
   .items>button
   {
-      padding: 10px 12px;
+      padding: 13px 8px;
+  }
+  .items a{
+    text-decoration: none;
+    color: white;
   }
 
   .fa-magnifying-glass
@@ -206,14 +234,64 @@ a>span
       font-size:15px;
   }
   
-  .track
+ 
+  .container_track
   {
-      border: 1px solid blue;
-      display: inline;
-      height: 40px;
-      width: 40px;
-      font-size:small ;
+    display: inline;
+    border: 1px  red;
+    position: relative;
+    cursor: pointer;
+    margin-left: 30px;
+    border-radius: 47%;
+    width: 32px;
+    height: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    
   }
+  #tooltipText
+  {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    white-space: nowrap;
+    padding: 5px 8px;
+    border-radius: 10px;
+    font-size: small;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  #tooltipText::before
+  {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 10px solid;
+    border-color: #000 #0000 #0000 #0000;
+  }
+
+  .container_track:hover #tooltipText
+  {
+    top: -230%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .container_track i{
+    font-size: xx-large;
+    color: rgb(97, 89, 89);
+    background-color: aliceblue;
+
+  }
+
   #hatke_grid
   {
      width: 40%;
@@ -229,11 +307,56 @@ a>span
       background: linear-gradient(to right,#a20b6a,#d80806);
       color: white;
   }
-  
+  /* ------------------------------------------------------- */
+
+
   .redMenu_container
   {
-      max-width: 1000px;
+      max-width: 1530px;
       margin: 0 auto;
+      border: 1px solid green;
+      background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)
+      
+      
+      
+      
+  }
+/* --------------------------------- */
+
+  
+/* .btn-grad {background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   /* color: #fff;
+   text-decoration: none;
+ } */ 
+
+
+
+
+
+
+
+  /* ---------------------------------------- */
+
+  .redMenu_container a
+  {
+    color: white;
+    font-weight: 700;
+    font-size: .9em;
   }
 
   nav ul
@@ -242,10 +365,24 @@ a>span
       padding: 0;
       list-style: none;
       position: relative;
+      
   }
   nav li
   {
       display: inline-block;
+      border: 1px  maroon;
+      margin-left: 8px;
+      height: 50px;
+     
+  }
+
+  nav li:hover
+  {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  .special_margin
+  {
+    margin-left: 80px;
   }
 
   nav a
@@ -255,20 +392,34 @@ a>span
       padding: .75em 1.75em;
   }
 
-  nav li:hover 
-  {
-      background: #a20b6a;
-  }
+
 
   .sub_menu
   {
       position: absolute;
-      background: teal;
-      width: 100%;
+      background: #eee8e8;
+      width: 80%;
       display: none;
       padding: 2em;
       z-index: 1;
   }
+
+
+  .inner_bg
+  {
+    border: 1px  orangered;
+    height: 100px;
+    width: 100px;
+  }
+
+  .menu-col-3 img
+  {
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+
+
 
   nav li:hover .sub_menu
   {
@@ -278,12 +429,16 @@ a>span
   .sub_menu li
   {
       display: block;
+      font-weight: small;
+      
   }
 
   .sub_menu a
   {
       padding: 0;
       margin-bottom: .25em;
+      color: #000;
+      font-weight: 500;
   }
   .sub_menu a:hover
   {
@@ -293,6 +448,8 @@ a>span
   .CatMenu
   {
       margin: 2.5em 0 .5em;
+      color: red;
+
   }
 
   .CatMenu:first-of-type
@@ -300,7 +457,7 @@ a>span
       margin-top: 0;
   }
 
-  .menu-col-1,.menu-col-2,.menu-col-3
+  .menu-col-1,.menu-col-2,.menu-col-3,.menu-col-4, .menu-col-5, .menu-col-6, .menu-col-7
   {
       float: left;
 
@@ -309,10 +466,11 @@ a>span
   {
       width: 25%;
   }
-  .menu-col-2
+  .menu-col-2, .menu-col-3, .menu-col-5, .menu-col-4
   {
       width: 25%;
   }
+  
 
   
   .carousel-item:hover ~a
@@ -365,7 +523,14 @@ a>span
   .divided a
   {
       text-decoration: none;
+      color: red;
   }
+
+  .divided a:hover
+  {
+    text-decoration: underline;
+  }
+
 
   /* --------------------------------- */
 
@@ -645,7 +810,10 @@ a>span
     list-style:none;
     
 }
-
+.bottom_black_box li:hover
+{
+  font-size:16.5px;
+}
 .bottom_heading
 {
     border: 1px green;
@@ -660,7 +828,7 @@ a>span
     color: white;
 }
 .bottom_black_box>div{
-    border: 1px solid orangered;
+    border: 1px  orangered;
     
 }
 
@@ -679,7 +847,7 @@ a>span
 
 .payment_img
 {
-    border: 1px solid maroon;
+    border: 1px  maroon;
     height: 70px;
     background-color:rgb(44, 42, 42) ;
 }
