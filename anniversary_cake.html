@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #anniversary_cake_container{
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+         grid-template-rows: auto;
+         gap: 30px;
+         margin: auto;
+         margin-left: 50px;
+         
+        }
+        #image{
+          height: 100px;
+          width: 100px;
+        }
+        #box1{
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: -20px;
+        }
+        #box{
+          height:40%;
+          width: 20%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        img{
+             height: 200px;
+             width: 100%;
+             margin-bottom: 20px;
+         }
+         #upper{
+            
+             position: relative;
+             text-align: center;
+             color:black;
+            
+            
+         }
+         .sub1{
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+           font-weight: bold;
+           margin-left: 500px;
+           margin-top: 30px;
+         }
+         .sub2{
+            position: absolute;
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            transform: translate(-50%, -50%);
+            margin-left: 500px;
+           margin-top: 80px;
+         }
+
+         @media only screen and (min-width:421px) and (max-width:920px){
+          #anniversary_cake_container{
+        
+         grid-template-columns: repeat(2,1fr);
+         grid-template-rows: auto;
+         /* width: 100%; */
+         }
+         .sub1{
+           margin-left: 100px;
+           margin-top: 1px;
+         }
+         .sub2{
+          margin-left: 190px;
+         }
+         #upper{
+          margin-right: -100px;
+         }
+
+        }
+
+
+        @media only screen and (min-width:90px) and (max-width:420px){
+          #anniversary_cake_container{
+        
+         grid-template-columns: repeat(1,1fr);
+         grid-template-rows: auto;
+         }
+         .sub1{
+           margin-left: 100px;
+           margin-top: 1px;
+         }
+         .sub2{
+          margin-left: 100px;
+         }
+         #upper{
+          margin-right: -100px;
+         }
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="upper">
+        <img src="    https://www.giftcart.com/pub/media/catalog/category/Flowers___Cakes.jpg" alt=""/>
+        <div class="sub1">Flowers & Cakes</div>
+         <div class="sub2">Find the perfect floral gift to celebrate a special occasion. Choose from roses, plants, gift baskets, <br> and a variety of flowers. Our selection also includes beautiful bunches, stunning bouquets, delicious cakes <br> and combos available for same day, midnight and next day delivery.</div>
+    </div>
+    <!-- <button><a href="cart.html">go to cart</a></button> -->
+    <div id="anniversary_cake_container"></div>
+</body>
+</html>
+<script>
+    
+    
+    
+    var FlowerCakedata=[
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/r/e/red-rose-img-01_3.jpg",
+      name: "Real Preserved Forever Red Rose",
+      price: " 999",
+      strikedoffprice: "₹1099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm09fnp0131-1.jpg",
+      name: "Pink Combination",
+      price: " 499",
+      strikedoffprice: "₹699.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/b/l/blue-rose-img-01.jpg",
+      name: "Real Preserved Forever Rose",
+      price: "999",
+      strikedoffprice: "₹1099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/a/cakeconh895.jpg",
+      name: "Dark Chocolate",
+      price: "699",
+      strikedoffprice: "₹799.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp2311_a-s.jpg",
+      name: "Bright Red Carnations Bouquet",
+      price: "789",
+      strikedoffprice: "₹999.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp1628_clp-r.jpg",
+      name: "Elegant Bunch Of Roses",
+      price: "499",
+      strikedoffprice: "₹799.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/a/cakecono2702.jpg",
+      name: "Red Velvet Heart Cake",
+      price: "899",
+      strikedoffprice: "₹1099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/g/egkkcake-2a-c.jpg",
+      name: "Crunchy Kit Kat Cake",
+      price: "1149",
+      strikedoffprice: "₹1299.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp1248_exl.jpg",
+      name: "Roses & Lilies Striped Bouquet",
+      price: "1749",
+      strikedoffprice: "₹1899.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/p/cp-cm01ckfnp055.jpg.jpg",
+      name: "Chocolate Cake",
+      price: "649",
+      strikedoffprice: "₹899.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/p/cp-cm01ckfnp031-mk.jpg",
+      name: "Crunchy Caramel Walnut Cake",
+      price: "849",
+      strikedoffprice: "₹999.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/p/cp-cm01ckfnp010-mk.jpg",
+      name: "Choco Spiral Cream Pineapple Cake",
+      price: "799",
+      strikedoffprice: "₹899.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/p/cp-cm01ckfnp006-mk.jpg",
+      name: "Exotic Pineapple Cake",
+      price: "699",
+      strikedoffprice: "₹799.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp2327.jpg",
+      name: "Royal Purple Orchids Bunch",
+      price: "699",
+      strikedoffprice: "₹799.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/a/cakeconh1030.jpg",
+      name: "Tiramisu Cake",
+      price: "1049",
+      strikedoffprice: "₹1299.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/a/cakeconh2080.jpg",
+      name: "Delicious Hearts Cake",
+      price: "799",
+      strikedoffprice: "₹899.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp551-1_clp.jpg",
+      name: "10 Pink Roses And Chocolate Cake Combo Standard",
+      price: "1299",
+      strikedoffprice: "₹1,399.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/g/egjmcake8-a.jpg",
+      name: "Creamy Vanilla Fruit Cake",
+      price: "899",
+      strikedoffprice: "₹1,099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/g/egflanwcake19-03-a.jpg",
+      name: "Chocolate Cake With 5 Star",
+      price: "899",
+      strikedoffprice: "₹1,099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/g/egflacakes19-013a.jpg",
+      name: "Blueberry Glaze Cake",
+      price: "849",
+      strikedoffprice: "₹1099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exdfnp562.jpg",
+      name: "Love and Love",
+      price: "2949",
+      strikedoffprice: "₹3999.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exdfnp567.jpg",
+      name: "Pink Carnations Passion Bouquet",
+      price: "1049",
+      strikedoffprice: "₹1299.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/b/l/black-rose-img-01.jpg",
+      name: "Real Preserved Forever Black Rose",
+      price: "1049",
+      strikedoffprice: "₹1299.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/a/cakeconh13.jpg",
+      name: "Blackforest Divine Cake",
+      price: "799",
+      strikedoffprice: "₹1099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+    {
+      image_url:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/g/egfdcake0059-a.jpg",
+      name: "Rich Chocolate Truffle Photo Cake",
+      price: "949",
+      strikedoffprice: "₹1099.00",
+      rating:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR"
+    },
+]
+
+
+
+      var cartData=JSON.parse(localStorage.getItem("cart1")) || []
+
+
+
+
+
+
+      FlowerCakedata.map(function(elem){
+      var box=document.createElement("div")
+      box.style.boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px";
+      
+       var image=document.createElement("img")
+        image.src=elem.image_url
+        image.style.height="280px"
+        image.style.width="270px"
+        image.style.marginLeft="35px"
+
+      
+        var name=document.createElement("p")
+        name.innerText=elem.name
+        name.style.marginLeft="30PX"
+        name.style.fontSize="20px"
+
+        
+        var box1=document.createElement("div")
+        box1.setAttribute("id","box1")
+        
+        var mrp=document.createElement("p")
+        mrp.innerText="MRP(incl GST)"
+        mrp.style.marginTop="20px"
+        
+        var price=document.createElement("p")
+        price.innerText=elem.price
+        price.style.fontSize="20px"
+        price.style.color="red"
+        price.style.marginLeft="-40px"
+       
+
+        var strikedoffprice=document.createElement("p")
+        strikedoffprice.innerText=elem.strikedoffprice
+        strikedoffprice.style.textDecoration="line-Through"
+        strikedoffprice.style.color="gray"
+        
+
+        var rating=document.createElement("img")
+        rating.src=elem.rating
+        rating.style.height="30px"
+        rating.style.width="130px"
+
+       
+        var btn = document.createElement("button");
+        btn.innerText = "Add to Cart";
+        btn.style.marginBottom="30px"
+        btn.style.marginTop="-50px"
+        btn.style.marginLeft="50px"
+        btn.style.backgroundColor="red"
+        btn.style.color="white"
+        btn.addEventListener("click", function () {
+        addToCart(elem);
+        });
+        
+        
+        
+         box1.append(mrp,price,strikedoffprice)
+        box.append(image,name,box1,rating,btn)
+        document.querySelector("#anniversary_cake_container").append(box)
+
+    })
+
+    function addToCart(elem) {
+    console.log(elem);
+    cartData.push(elem);
+    localStorage.setItem("cart1", JSON.stringify(cartData));
+    alert("item added to cart");
+  }
+
+
+</script>
