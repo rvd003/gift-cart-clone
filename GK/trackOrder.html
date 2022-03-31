@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track order</title>
+    <style>
+    
+
+#orderh1{
+    text-align: center;
+    color: black
+}
+#tracking{
+    color: red;
+}
+#trackOrderForm{
+    margin-top: 60px;
+    margin-left: 200px;
+}
+#trackOrderForm>input{
+    font-size: 20px;
+    padding: 7px;
+    margin: 20px;
+}
+#trackOrderSubmit{
+    color: white;
+    background-color: red;
+   
+    cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1 id="orderh1">Order <span id="tracking">Tracking</span>   </h1>
+  <form action="" id="trackOrderForm">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Order-Id">
+    <input type="submit" id="trackOrderSubmit" >
+  </form>
+   
+</body>
+<script>
+document.querySelector("#trackOrderForm").addEventListener("submit", trackOrderFun)
+function trackOrderFun(){
+    event.preventDefault();
+    window.location.href="trackStatus.html"
+}
+</script>
+</html>

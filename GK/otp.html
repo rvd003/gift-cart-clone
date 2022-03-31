@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Page</title>
+    <style>
+    #paypalImg{
+       width: 50%;
+       margin: auto;
+       padding: 2%; 
+    }
+    h1{
+        color: peru;
+    }
+    #otpForm{
+        text-align: center;
+    }
+    #otpForm >input{
+font-size: 30px;
+    }
+    #otpSubmit{
+        padding: 5px 20px 5px 20px;
+        color: white;
+        background-color: rgb(238, 175, 16);
+        cursor: pointer;
+      border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <center><img src="https://logodix.com/logo/437153.png" width=40%  alt=""></center>
+    
+    <form action=""id="otpForm" >
+        <h1>Please fill the otp sent on your registered mobile no </h1>
+        <input type="text"placeholder="Enter 6-digit OTP">
+           <input type="submit" id="otpSubmit" value="Continue">    
+      </form>
+</body>
+<script>
+    document.querySelector("#otpForm").addEventListener("submit",otpFun);
+    function otpFun (){
+event.preventDefault();
+alert("Pament Successfull Your order has been successfully placed");
+window.location.href="index.html"
+    }
+</script>
+</html>

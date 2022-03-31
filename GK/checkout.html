@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CheckOut Page</title>
+    <style>
+      #checkoutBox {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      #checkoutForm {
+        width: 85%;
+        margin-left: 50px;
+        font-size: 20px;
+      }
+      input {
+        width: 100%;
+        font-size: 20px;
+        padding: 2%;
+      }
+      h1 {
+        color: white;
+        background-color: red;
+        font-size: 20px;
+        margin-right: -25px;
+        padding: 2%;
+      }
+      #checkoutSubmit {
+        color: white;
+        background-color: red;
+        cursor: pointer;
+      }
+
+      #checkoutSubmit:hover {
+        background-color: rgba(0, 85, 255, 0.866);
+      }
+      @media all  and (max-width:419px){
+       
+        #checkoutForm{
+         width: 100%;
+       }
+       #checkoutBox{
+        display: block;
+      
+    }
+    }
+   #imgDiv{
+       margin-top: 40px;
+       padding: 4%;
+   }
+    </style>
+  </head>
+  <body>
+    <div id="checkoutBox">
+      <div>
+        <form id="checkoutForm" action="">
+          <h1>Fill your Address for delivery</h1>
+          <label for="">Name</label>
+          <input type="text" id="name" placeholder="Enter your Name" />
+
+          <label for="">Mobile number</label>
+          <input type="Number" id="mobile" />
+
+          <label for="">Pin Code</label>
+          <input type="text" id="" />
+          <label for="">Flat, House no., Building, Company, Apartment</label>
+          <input type="text" id="" />
+          <label for="">Area, Street, Sector, Village</label>
+          <input type="text" />
+          <label for="">LandMark</label>
+          <input type="text" />
+          <label for="">City</label>
+          <input type="text" /><br /><br />
+          <label for="">Country</label>
+          <select name="" id="">
+            <option value="India">India</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="China">China</option>
+            <option value="	Maldives">Maldives</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="	Sri Lanka">Sri Lanka</option>
+            <option value="	Cambodia *">Cambodia *</option>
+            <option value="India">India</option>
+
+            <option value="USA">USA</option>
+
+            <option value="Australia">Australia</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Sweden">Sweden</option>
+          </select>
+          <label for="">State</label>
+          <select name="" id="">
+            <option value="">Andhra Pradesh</option>
+            <option value="">Arunachal Pradesh</option>
+            <option value="">Assam</option>
+            <option value="">Bihar</option>
+            <option value="">Chandigarh (UT)</option>
+            <option value="">Chhattisgarh</option>
+            <option value="">Delhi</option>
+            <option value="">Goa</option>
+            <option value="">Gujarat</option>
+            <option value="">Haryana</option>
+            <option value="">Himachal Pradesh</option>
+            <option value="">Jammu and Kashmir</option>
+            <option value="">Jharkhand</option>
+            <option value="">Karnataka</option>
+            <option value="">Kerala</option>
+            <option value="">Madhya Pradesh</option>
+            <option value="">Maharashtra</option>
+            <option value="">Manipur</option>
+            <option value="">Meghalaya</option>
+            <option value="">Mizoram</option>
+            <option value="">Nagaland</option>
+            <option value="">Orissa</option>
+            <option value="">Punjab</option>
+            <option value="">Rajasthan</option>
+            <option value="">Sikkim</option>
+            <option value="">Tamil Nadu</option>
+            <option value="">Telangana</option>
+            <option value="">Tripura</option>
+            <option value="">Uttar Pradesh</option>
+            <option value="">Uttarakhand</option>
+            <option value="">West Bengal</option></select
+          ><br /><br />
+
+          <input 
+            type="submit"
+            id="checkoutSubmit"
+            value="Continue to the payment page"
+          />
+        </form>
+      </div>
+      <div id="imgDiv">
+        <img
+          src="https://www.giftcart.com/pub/static/frontend/Mgs/molly/en_US/images/Covid--19-banner.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+  <script>
+    
+document.querySelector("#checkoutForm").addEventListener("submit",checkoutFun);
+    function checkoutFun () {
+      event.preventDefault();
+    //  console.log("inside")
+      window.location.href = "payment.html";
+  
+    }
+  </script>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      form {
+        display: block;
+        box-sizing: border-box;
+        width: 40%;
+        height: auto;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        margin: 3% auto;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-bottom: 50px;
+      }
+      h1 {
+        background-color: red;
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 500;
+        margin-left: -20px;
+        text-align: center;
+        margin-top: 0px;
+      }
+      input {
+        width: 90%;
+
+        font-size: 20px;
+        padding: 2%;
+        display: block;
+      }
+      #loginSubmit{
+        background-color: red;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      #loginSubmit:hover{
+        background-color:rgb(120, 12, 12);
+      }
+      h2 {
+        text-align: center;
+        color: red;
+      }
+      button {
+        text-align: center;
+        cursor: pointer;
+        margin-left: 200px;
+        padding: 10px 15px 10px 15px;
+      }
+      button:hover {
+        color: white;
+        background-color: rgb(120, 12, 12);;
+      }
+      p {
+        color: grey;
+      }
+      #bottomP {
+        text-align: center;
+      }
+      #loginBox {
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+
+        width: 100%;
+        height: 5px;
+        margin-right: 3%;
+        cursor: pointer;
+        margin-bottom: 100px;
+      }
+      @media all and (min-width:420px) and (max-width:780px){
+       
+       form{
+         width: 80%;
+       }
+      }
+    
+      @media all and (min-width:781px) and (max-width:1200px){
+       
+       form{
+         width: 60%;
+       }
+      }
+    
+      @media all  and (max-width:419px){
+       
+       form{
+         width: 100%;
+       }
+       #loginBox{
+         display: block;
+       }
+      }
+      
+     
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <h1>Sign IN</h1>
+      <p>Registered Customers</p>
+      <hr />
+
+      <label for="">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" />
+
+      <label for="">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+      /><br />
+
+      <input type="submit" id="loginSubmit" value="Login" />
+      <h2>New? Join Giftcart</h2>
+      <button >SIGN UP</button>
+   <!-- <a href="signup.html"><button >SIGN UP</button></a>       <br /> -->
+      <p id="bottomP">Or Sign In With</p>
+      <hr />
+      <div id="loginBox">
+        <a
+          href="https://www.facebook.com/login.php?skip_api_login=1&api_key=2499248653450803&kid_directed_site=0&app_id=2499248653450803&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.8%2Fdialog%2Foauth%3Fauth_type%3Drerequest%26client_id%3D2499248653450803%26state%3D0345f2d9cb19939a3c79d1f7729b5de7%26response_type%3Dcode%26sdk%3Dphp-sdk-5.4.4%26redirect_uri%3Dhttps%253A%252F%252Fwww.giftcart.com%252Fsociallogin%252Fsocial%252Fcallback%252F%253Fhauth_done%253DFacebook%26scope%3Demail%252Cpublic_profile%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D7b166729-c37e-4678-aa6e-ad7f14fadcd7%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.giftcart.com%2Fsociallogin%2Fsocial%2Fcallback%2F%3Fhauth_done%3DFacebook%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D0345f2d9cb19939a3c79d1f7729b5de7%23_%3D_&display=page&locale=en_GB&pl_dbl=0"
+          ><img
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT-aW0ElmQB1tdPOouESJRCnZNrN8Y_k8Ly05sNj_y6uzCtncfO  "width="230"
+            alt=""
+        /></a>
+
+        <a
+          href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=799939428125-s9c043vo6plqs42dshnj5ssujldciboo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.giftcart.com%2Fsociallogin%2Fsocial%2Fcallback%2F%3Fhauth.done%3DGoogle&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.login%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.me%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.profile.emails.read&access_type=offline&flowName=GeneralOAuthFlow"
+        >
+          <img
+            src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR1GEVQQ9cHy7ODYmGdpGTB9J426QtobGAWVXxlpFTzjhEtzUn7" width="200"
+            alt=""
+          />
+        </a>
+      </div>
+    </form>
+  </body>
+  <script>
+    document.querySelector("form").addEventListener("submit", loginFun);
+    let regUsers = JSON.parse(localStorage.getItem("userDetails"));
+   
+
+// console.log(regUsers);
+// console.log(12)
+
+    function loginFun() {
+      event.preventDefault();
+      let enteredEmail = document.querySelector("#email").value;
+      let enteredPassword = document.querySelector("#password").value;
+      for (let i = 0; i < regUsers.length; i++) {
+        if (
+          enteredEmail == regUsers[i].email &&
+          enteredPassword == regUsers[i].password
+        ) {
+          alert("Login Successful");
+          window.location.href = "index.html";
+          break;  
+        } else {
+          alert("Login Failed Please Enter Correct Data");
+          break;
+        }
+      }
+    }
+    document.querySelector("button").addEventListener("click", signupfun);
+    function signupfun(){
+      event.preventDefault();
+      // console.log("insidefun")
+      window.location.href="signup.html";
+    }
+  </script>
+</html>
