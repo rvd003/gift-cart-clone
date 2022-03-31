@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #cart_container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+      }
+      #box1{
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: -20px;
+        }
+        p{
+          font-size: 23px;
+          margin-top: 30px;
+          margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+  <p></p>
+    <div id="cart_container"></div>
+</body>
+</html>
+
+
+
+<script>
+var cartDataa=JSON.parse(localStorage.getItem("cart1"))
+console.log(cartDataa)
+var length=cartDataa.length
+var total=cartDataa.reduce(function(sum,elem,index){
+  return sum+elem.price
+},0)
+document.querySelector("p").innerText="You have "+length +" item in cart and total is Rs : "+total
+
+      cartDataa.map(function(elem,index){
+      var box=document.createElement("div")
+      box.style.boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px";
+      
+       var image=document.createElement("img")
+        image.src=elem.image_url
+        image.style.height="280px"
+        image.style.width="270px"
+        image.style.marginLeft="35px"
+
+      
+        var name=document.createElement("p")
+        name.innerText=elem.name
+        name.style.marginLeft="30PX"
+        name.style.fontSize="20px"
+
+        
+        var box1=document.createElement("div")
+        box1.setAttribute("id","box1")
+        
+        
+        var price=document.createElement("p")
+        price.innerText=elem.price
+        price.style.fontSize="20px"
+        price.style.color="red"
+
+        var strikedoffprice=document.createElement("p")
+        strikedoffprice.innerText=elem.strikedoffprice
+        strikedoffprice.style.textDecoration="line-Through"
+        strikedoffprice.style.color="gray"
+        
+
+        var rating=document.createElement("img")
+        rating.src=elem.rating
+        rating.style.height="30px"
+        rating.style.width="130px"
+
+       
+        var btn = document.createElement("button");
+        btn.innerText = "Remove item";
+        btn.style.marginBottom="30px"
+        btn.style.marginTop="-50px"
+        btn.style.marginLeft="50px"
+        btn.style.backgroundColor="red"
+        btn.style.color="white"
+        btn.addEventListener("click", function () {
+        removeItem(elem,index);
+        });
+        
+        
+        
+         box1.append(price,strikedoffprice)
+        box.append(image,name,box1,rating,btn)
+        document.querySelector("#cart_container").append(box)
+
+    })
+    function removeItem(elem,index) {
+    console.log(elem, index);
+    cartDataa.splice(index, 1);
+    console.log(cartDataa);
+    localStorage.setItem("cart1", JSON.stringify(cartDataa));
+      window.location.reload();
+  }
+
+</script>
