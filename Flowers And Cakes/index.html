@@ -1,0 +1,552 @@
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers And Cakes</title>
+
+  <style> 
+
+#toyContainer {
+         height: 95%;
+         width: 95%;
+        margin-left: 35px;
+         
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(100px);
+        row-gap: 40px;
+        column-gap: 25px;
+        text-align: center;
+        
+  
+  
+    
+}
+
+.img {
+     margin-top: 15px;
+    height: 270px;
+    width: 270px;
+}
+
+.minibox {
+    
+  
+    justify-content: space-around;
+    
+    
+}
+
+.cut {
+  text-decoration: line-through;
+   color: grey;
+   margin-top: 23px;
+}
+
+
+
+.box1 {
+  
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 35px;
+
+  
+  
+}
+
+.toyRating {
+  height: 25px;
+  margin-right: 100px;
+}
+
+
+
+.discount {
+  
+  width: 50px;
+  height: 50px;
+  
+  border-radius: 50%;
+  color: white;
+  background-color: red;
+  margin-left: 200px;
+  margin-top: 15px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.icons {
+  height: 20px;
+  width: 20px;
+}
+
+
+
+.ibox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  margin-right: 7px;
+  color: white;
+  background-color: red;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+}
+
+.name:hover {
+    color: red;
+}
+
+</style>
+
+</head>
+<body>
+    <div id="toyContainer">
+      
+
+    </div>
+</body>
+</html>
+
+<script>
+
+src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+
+var Gifts = [
+    {
+      id: 1,
+      name: "Real Preserved Forever Red Rose",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/r/e/red-rose-img-01_3.jpg", 
+      
+      Price: "999.00",
+      strikePrice: "₹1,099.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "40% Off ",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 2,
+      name: "Pink Combination",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm09fnp0131-1.jpg", 
+      
+      Price: "749.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "60% Off",
+             cart: "Add to cart"
+      
+
+    },
+
+    {
+      id: 3,
+      name: "",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/b/l/blue-rose-img-01.jpg", 
+      
+      Price: "999.00",
+      strikePrice: "₹1,099.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 4,
+      name: "Dark Chocolate",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+      "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/a/cakeconh895.jpg", 
+      
+      Price: "699.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "20% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 5,
+      name: "Graceful Roses Bouquet",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp1289_clp-s.jpg ", 
+      
+      Price: "549.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "25% Off",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 6,
+      name: "Bright Red Carnations Bouquet",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp2311_a-s.jpg", 
+      
+      Price: "749.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "63% Off",
+             cart: "Add to cart"
+      
+
+    },
+
+    {
+      id: 7,
+      name: "Elegant Bunch Of Roses",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp1628_clp-r.jpg", 
+      
+      Price: "499.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "38% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 8,
+      name: "Pineapple Swirl Cake",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/a/cakeconh01.jpg", 
+      
+      Price: "699.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "10% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 9,
+      name: "Red Velvet Heart Cake",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+      "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/a/cakecono2702.jpg", 
+      
+      Price: "899.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30% Off",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 10,
+      name: "Crunchy Kit Kat Cake",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/p/cp-cm01ckfnp031-mk.jpg", 
+      
+      Price: "1149.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "36% Off",
+             cart: "Add to cart"
+      
+
+    },
+
+    {
+      id: 11,
+      name: "Red Roses With Truffle Cake Standard",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp547-1_clp.jpg", 
+      
+      Price: "1299.00 ",
+      strikePrice: "₹1,449.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 12,
+      name: "Roses & Lilies Striped Bouquet",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/e/x/exfnp1248_exl.jpg", 
+      
+      Price: "1749.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "20 Off%",
+             cart: "Add to cart"
+      
+    },
+
+
+    {
+      id: 13,
+      name: "Love Coupons (Blue and Pink)",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm08gctu48251-1.jpg", 
+      
+      Price: "4,99.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "40% Off",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 14,
+      name: "Travel Roulette Game",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm08ucer48519-1.jpg", 
+      
+      Price: "599.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "60% Off",
+             cart: "Add to cart"
+
+      
+
+    },
+
+    {
+      id: 15,
+      name: "Personalised Memory game",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm08gbgt48501-1-blue.jpg", 
+      
+      Price: "799.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 16,
+      name: "Love Buddy Combo",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+      "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm01gbgt0864-0.jpg", 
+      
+      Price: "1,099.00 ",
+      strikePrice: "₹1,199.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "20% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 17,
+      name: "Neem Wood Teethers - Shapes",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/a/r/arts010.jpg", 
+      
+      Price: "599.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "40% Off",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 18,
+      name: "3D Pin Art Sculpture Impression Toy (RED, Medium)",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm08ucer47429.jpg", 
+      
+      Price: "1099",
+      strikePrice: "₹1,499.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "60% Off",
+             cart: "Add to cart"
+
+      
+
+    },
+
+    {
+      id: 19,
+      name: "Personalised Photo Memory Game Triangle Wave",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+      "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm08gbgt48502-1-blue.jpg", 
+      
+      Price: "799.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 20,
+      name: "Uncle Tony Beard Comb",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+      "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm08gctu48252-1.jpg", 
+      
+      Price: "1399.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "20% Off",
+             cart: "Add to cart"
+      
+    },
+
+    
+
+    
+];
+
+Gifts.map(function (elem) {
+    var box = document.createElement("div");
+    box.setAttribute("class", "box1")
+
+    var discount =document.createElement("div");
+    discount.innerText = elem.discount;
+    discount.setAttribute("class", "discount")
+
+    var img = document.createElement("img");
+    img.src = elem.image;
+
+    var name = document.createElement("h3");
+    name.setAttribute("class", "name")
+    name.innerText = elem.name;
+    name.style.fontWeight ="lighter"
+    name.style.fontSize ="18px"
+
+    var icons = document.createElement("img");
+    icons.src = elem.icon;
+    icons.setAttribute("class","icons")
+
+    var ibox = document.createElement("div");
+    ibox.setAttribute("class", "ibox")
+    ibox.append(name)
+
+
+    
+    
+
+    var minibox = document.createElement("div");
+    minibox.style.display ="flex"
+    minibox.setAttribute("class", "minibox");
+
+
+    var mrp = document.createElement("p");
+    mrp.innerText = elem.Price;
+    mrp.style.color = "red"
+    mrp.style.fontWeight ="bolder"
+    mrp.style.fontSize ="20px"
+
+
+    var strikePrice = document.createElement("p");
+    strikePrice.innerText = elem.strikePrice;
+    strikePrice.setAttribute("class","cut");
+
+    var rating = document.createElement("img")
+    rating.src = elem.rating;
+    rating.setAttribute("class","toyRating");
+
+    var buttons= document.createElement("button")
+    buttons.innerText = elem.cart;
+    
+
+    img.setAttribute("class", "img")
+
+     minibox.append(mrp, strikePrice)
+     
+    box.append( discount,img, ibox, minibox, rating, buttons);
+document.querySelector("#toyContainer").append(box);
+});
+
+
+</script>

@@ -1,0 +1,552 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Beauty</title>
+
+  <style> 
+
+#container {
+         height: 95%;
+         width: 95%;
+        margin-left: 35px;
+         
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(100px);
+        row-gap: 40px;
+        column-gap: 25px;
+        text-align: center;
+        
+  
+  
+    
+}
+
+.img {
+     margin-top: 15px;
+    height: 270px;
+    width: 270px;
+}
+
+.minibox {
+    
+  
+    justify-content: space-around;
+    
+    
+}
+
+.cut {
+  text-decoration: line-through;
+   color: grey;
+   margin-top: 23px;
+}
+
+
+.box1 {
+  
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 35px;
+
+  
+  
+}
+
+.rating {
+  height: 25px;
+  margin-right: 100px;
+}
+
+
+
+.discount {
+  
+  width: 50px;
+  height: 50px;
+  
+  border-radius: 50%;
+  color: white;
+  background-color: red;
+  margin-left: 200px;
+  margin-top: 15px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.icons {
+  height: 20px;
+  width: 20px;
+  
+}
+
+
+
+.icons:hover {
+    position: absolute;
+    opacity: 0.3;
+    
+    
+}
+
+.ibox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  
+}
+
+button {
+  margin-right: 7px;
+  color: white;
+  background-color: red;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+</style>
+
+</head>
+<body>
+    <div id="container">
+      
+
+    </div>
+</body>
+</html>
+
+<script>
+
+src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+
+var Gifts = [
+    {
+      id: 1,
+      name: "Denver Combo Gift For Men",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt3312.jpg", 
+      
+      Price: "1399.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "40% Off ",
+             cart: "Add to cart",
+             span: "MRP (incl gst)"
+             
+    },
+      
+
+    {
+      id: 2,
+      name: "Stay Young Special Edition Box",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/s/t/stay-young-special-edition-box.jpg", 
+      
+      Price: "1499.00 ",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "60% Off",
+             cart: "Add to cart"
+      
+
+    },
+
+    {
+      id: 3,
+      name: "Me Time Hamper",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt46444.jpg", 
+      
+      Price: "2099.00 ",
+      strikePrice: "₹2,249.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 4,
+      name: "Uncle Tony Beard Comb",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/u/t/ut-7878.jpg", 
+      
+      Price: "199.00",
+      strikePrice: "₹399.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "20% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 5,
+      name: "Uncle Tony Beard Oil",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/u/t/ut-9644.jpg", 
+      
+      Price: "599.00",
+      strikePrice: "₹1,199.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "25% Off",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 6,
+      name: "Uncletony Complete Starter Pack",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/p/cp-cm08unto0023.jpg", 
+      
+      Price: "1100.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "63% Off",
+             cart: "Add to cart"
+      
+
+    },
+
+    {
+      id: 7,
+      name: "Acne Care and Face Glow Box",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm08gclb49787-1.jpg", 
+      
+      Price: "₹1799.00",
+      strikePrice: "₹2,842.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "38% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 8,
+      name: "Khadi Hamper For Women",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt3313-updated.jpg", 
+      
+      Price: "1799.00",
+      strikePrice: "",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "10% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 9,
+      name: "Olay Hamper For Women",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt3322.jpg", 
+      
+      Price: "1399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30% Off",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 10,
+      name: "Uncle Tony After Shave Balm",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/u/t/ut-9632.jpg", 
+      
+      Price: "1399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "36% Off",
+             cart: "Add to cart"
+      
+
+    },
+
+    {
+      id: 11,
+      name: "Me Time Hamper",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/u/t/ut-9644.jpg", 
+      
+      Price: "1399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30% Off",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 12,
+      name: "Uncle Tony Beard Comb",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/s/i/sixer-for-the-go-getter_1-_1_.jpg", 
+      
+      Price: "1399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "20%",
+             cart: "Add to cart"
+      
+    },
+
+
+    {
+      id: 1,
+      name: "Denver Combo Gift For Men",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt3312.jpg", 
+      
+      Price: "1399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "40% Off",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 2,
+      name: "Stay Young Special Edition Box",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/s/t/stay-young-special-edition-box.jpg", 
+      
+      Price: "1399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "60%",
+             cart: "Add to cart"
+
+      
+
+    },
+
+    {
+      id: 3,
+      name: "Me Time Hamper",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt46444.jpg", 
+      
+      Price: "₹1399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30%",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 4,
+      name: "Uncle Tony Beard Comb",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/u/t/ut-7878.jpg", 
+      
+      Price: "₹1,399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "20%",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 1,
+      name: "Denver Combo Gift For Men",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt3312.jpg", 
+      
+      Price: "₹1,399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "40%",
+             cart: "Add to cart"
+             
+    },
+      
+
+    {
+      id: 2,
+      name: "Stay Young Special Edition Box",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/s/t/stay-young-special-edition-box.jpg", 
+      
+      Price: "₹1,399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "60%",
+             cart: "Add to cart"
+
+      
+
+    },
+
+    {
+      id: 3,
+      name: "Me Time Hamper",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm05gbgt46444.jpg", 
+      
+      Price: "₹1,399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "30%",
+             cart: "Add to cart"
+      
+    },
+
+    {
+      id: 4,
+      name: "Uncle Tony Beard Comb",
+      icon:
+           "https://www.pngitem.com/pimgs/m/308-3082498_heart-logo-png-transparent-png.png",
+      image:
+        "https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/u/t/ut-7878.jpg", 
+      
+      Price: "₹1,399.00",
+      strikePrice: "₹3,201.00",
+      rating:
+             "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoid2kjW49sx7Rto08B2UWAj5IAgw3TE2m0ANHRbQE2JU2ZOgR",
+             discount: "20%",
+             cart: "Add to cart"
+      
+    },
+
+    
+
+    
+];
+
+Gifts.map(function (elem) {
+    var box = document.createElement("div");
+    box.setAttribute("class", "box1")
+
+    var discount =document.createElement("div");
+    discount.innerText = elem.discount;
+    discount.setAttribute("class", "discount")
+
+    var img = document.createElement("img");
+    img.src = elem.image;
+
+    var name = document.createElement("h3");
+    name.innerText = elem.name;
+    name.style.fontWeight ="lighter"
+    name.style.fontSize ="18px"
+
+    var icons = document.createElement("img");
+    icons.src = elem.icon;
+    icons.setAttribute("class","icons")
+
+    var ibox = document.createElement("div");
+    ibox.setAttribute("class", "ibox")
+    ibox.append(name,icons)
+
+
+    
+    
+
+    var minibox = document.createElement("div");
+    minibox.style.display ="flex"
+    minibox.setAttribute("class", "minibox");
+
+
+    var mrp = document.createElement("p");
+    mrp.innerText = elem.Price;
+    mrp.style.color = "red"
+    mrp.style.fontWeight ="bolder"
+    mrp.style.fontSize ="20px"
+
+
+    var strikePrice = document.createElement("p");
+    strikePrice.innerText = elem.strikePrice;
+    strikePrice.setAttribute("class","cut");
+
+    var rating = document.createElement("img")
+    rating.src = elem.rating;
+    rating.setAttribute("class","rating");
+
+    var buttons= document.createElement("button")
+    buttons.innerText = elem.cart;
+    
+
+    img.setAttribute("class", "img")
+
+     minibox.append(mrp, strikePrice)
+     
+    box.append( discount,img, ibox, minibox, rating, buttons);
+document.querySelector("#container").append(box);
+});
+
+
+</script>
