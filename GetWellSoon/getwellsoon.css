@@ -50,12 +50,12 @@
 
 }
 
-#box>div>img {
+#box>div img {
     width: 100%;
 
 }
 
-#box>div>img:hover {
+#box>div img:hover {
     position: relative;
     opacity: 0.2;
 
@@ -129,13 +129,13 @@ hr {
     
 }
 
-#categoryBox>div>img:hover {
+#categoryBox>div img:hover {
     position: relative;
     opacity: 0.2;
     
 }
 
-#categoryBox>div>img {
+#categoryBox>div img {
     height: 80%;
     width: 100%;
 
@@ -255,4 +255,12 @@ p {
 
 #getwellh1 {
     color: black;
+}
+
+.text_writing
+{
+    border: 1px  red;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
 }

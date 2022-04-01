@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      #cart_container{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px;
-        width: 90%;
-        margin: auto;
-        margin-top: 30px;
-      }
-      #box3{
-          display: flex;
-         
-          margin-top: -80px;
-          margin-left: -70px;
-        
-          
-          
-        }
-        p{
-          font-size: 30px;
-          margin-top: 30px;
-          margin-left: 110px;
-         
-        }
-        /* #total{
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #cart_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    #box3 {
+      display: flex;
+
+      margin-top: -80px;
+      margin-left: -70px;
+
+
+
+    }
+
+    p {
+      font-size: 30px;
+      margin-top: 30px;
+      margin-left: 110px;
+
+    }
+
+    /* #total{
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
          padding: 20px;
          width: 600px;
@@ -38,252 +42,252 @@
         color: rgb(8, 8, 8);
         background-color: rgb(230, 216, 24);
         } */
-        table {
-          border-collapse: separate;
-           border-spacing: 50px 0;
-           margin-left: 500px;
-           margin-top: -20px;
-           margin-bottom: 50px;
-           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;     
-          
-         }
-           
-        td {
-        padding: 10px 0;
-         }
-        
-         
-    </style>
+    table {
+      border-collapse: separate;
+      border-spacing: 50px 0;
+      margin-left: 500px;
+      margin-top: -20px;
+      margin-bottom: 50px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+
+    td {
+      padding: 10px 0;
+    }
+  </style>
 </head>
-<body >
-  
-    <div id="cart_container"></div>
-    <p id="total"></p>
-    <table align="right">
-      <thead>
-          <!-- <tr id="trr">313131313</tr> -->
-          <div></div>
-      </thead>
-      <tbody >
-          
-      </tbody>
+
+<body>
+
+  <div id="cart_container"></div>
+  <p id="total"></p>
+  <table align="right">
+    <thead>
+      <!-- <tr id="trr">313131313</tr> -->
+      <div></div>
+    </thead>
+    <tbody>
+
+    </tbody>
   </table>
-  
-    
+
+
 </body>
+
 </html>
 
 
 
 <script>
-var cartDataa=JSON.parse(localStorage.getItem("cart1"))
-   console.log(cartDataa)
-      var length=cartDataa.length
-      var total=cartDataa.reduce(function(sum,elem,index){
-        return sum+Number(elem.price)
-        },0)
+  var cartDataa = JSON.parse(localStorage.getItem("cart1"))
+  //  console.log(cartDataa)
+  var length = cartDataa.length
+  var total = cartDataa.reduce(function (sum, elem, index) {
+    return sum + Number(elem.price)
+  }, 0)
 
-    var tr1=document.createElement("tr")
-     var td1=document.createElement("td")
-     td1.innerText="Total MRP"
-     td1.style.fontSize="20px"
-     var td2=document.createElement("td")
-     td2.innerText="Rs  "+total
-     td2.style.fontSize="20px"
+  var tr1 = document.createElement("tr")
+  var td1 = document.createElement("td")
+  td1.innerText = "Total MRP"
+  td1.style.fontSize = "20px"
+  var td2 = document.createElement("td")
+  td2.innerText = "Rs  " + total
+  td2.style.fontSize = "20px"
 
-     var tr2=document.createElement("tr")
-     var td3=document.createElement("td")
-     td3.innerText="Discount on MRP"
-     td3.style.fontSize="20px"
-     var td4=document.createElement("td")
-     td4.innerText="Rs 58 "
-     td4.style.fontSize="20px"
+  var tr2 = document.createElement("tr")
+  var td3 = document.createElement("td")
+  td3.innerText = "Discount on MRP"
+  td3.style.fontSize = "20px"
+  var td4 = document.createElement("td")
+  td4.innerText = "Rs 58 "
+  td4.style.fontSize = "20px"
 
-     var tr3=document.createElement("tr")
-     var td5=document.createElement("td")
-     td5.innerText="Coupon Discount"
-     td5.style.fontSize="20px"
-     var td6=document.createElement("td")
-     td6.innerText="Apply Coupon"
-     td6.style.color="red"
-     td6.style.fontSize="20px"
+  var tr3 = document.createElement("tr")
+  var td5 = document.createElement("td")
+  td5.innerText = "Coupon Discount"
+  td5.style.fontSize = "20px"
+  var td6 = document.createElement("td")
+  td6.innerText = "Apply Coupon"
+  td6.style.color = "red"
+  td6.style.fontSize = "20px"
 
-     var tr4=document.createElement("tr")
-     var td7=document.createElement("td")
-     td7.innerText="Convenience Fee"
-     td7.style.fontSize="20px"
-     var td8=document.createElement("td")
-     td8.innerText=" Rs 49 "
-     td8.style.fontSize="20px"
-
-     
-     var tr5=document.createElement("tr")
-     var td9=document.createElement("td")
-     td9.innerText="Total Amount"
-     td9.style.fontSize="20px"
-     td9.style.fontWeight="bold"
-     var td10=document.createElement("td")
-     td10.innerText="Rs "+(total+49-58)
-     td10.style.fontSize="20px"
-     td10.style.fontWeight="bold"
+  var tr4 = document.createElement("tr")
+  var td7 = document.createElement("td")
+  td7.innerText = "Shipping Charges"
+  td7.style.fontSize = "20px"
+  var td8 = document.createElement("td")
+  td8.innerText = " Rs 49 "
+  td8.style.fontSize = "20px"
 
 
-     var tr7=document.createElement("tr")
-     var td11=document.createElement("td")
-     td11.innerText="Total Items"
-     td11.style.fontSize="20px"
-    //  td12.style.fontWeight="bold"
-     var td12=document.createElement("td")
-     td12.innerText=length
-     td12.style.fontSize="20px"
-    //  td10.style.fontWeight="bold"
-
-    
-    var tr6=document.createElement("tr")
-    btn3=document.createElement("button")
-    btn3.innerText="PLACE ORDER"
-    btn3.style.width="250px"
-    btn3.style.height="50px"
-    btn3.style.fontSize="20px"
-    btn3.style.color="white"
-    btn3.style.backgroundColor="red"
-    btn3.style.marginTop="20px"
-    btn3.style.border="none"
-    btn3.style.marginBottom="20px"
-    
-
-        
-     tr1.append(td1,td2)
-     tr2.append(td3,td4)
-     tr3.append(td5,td6)
-     tr4.append(td7,td8)
-     tr5.append(td9,td10)
-     tr6.append(btn3)
-     tr7.append(td11,td12)
-     document.querySelector("tbody").append(tr7,tr1,tr2,tr3,tr4,tr5,tr6)
+  var tr5 = document.createElement("tr")
+  var td9 = document.createElement("td")
+  td9.innerText = "Total Amount"
+  td9.style.fontSize = "20px"
+  td9.style.fontWeight = "bold"
+  var td10 = document.createElement("td")
+  td10.innerText = "Rs " + (total + 49 - 58)
+  td10.style.fontSize = "20px"
+  td10.style.fontWeight = "bold"
 
 
-         
-      cartDataa.map(function(elem,index){
-      var box1=document.createElement("div")
-      
-      
-      var box2=document.createElement("div")
-      
-
-      
-      
-      var image=document.createElement("img")
-        image.src=elem.image_url
-        image.style.height="500px"
-        image.style.width="600px"
-        image.style.marginLeft="35px"
-
-      
-        var name=document.createElement("p")
-        name.innerText=elem.name
-        name.style.marginLeft="30PX"
-        name.style.fontSize="40px"
-        name.style.marginTop="0px"
-
-        
-        var box3=document.createElement("div")
-        box3.setAttribute("id","box3")
-        
-        
-        
-        var price=document.createElement("p")
-        price.innerText=elem.price
-        price.style.fontSize="28px"
-        price.style.color="red"
-        price.style.marginLeft="10px"
-
-        var strikedoffprice=document.createElement("p")
-        strikedoffprice.innerText=elem.strikedoffprice
-        strikedoffprice.style.textDecoration="line-Through"
-        strikedoffprice.style.color="gray"
-        strikedoffprice.style.fontSize="28px"
-        
-
-        var rating=document.createElement("img")
-        rating.src=elem.rating
-        rating.style.height="30px"
-        rating.style.width="130px"
-        rating.style.marginLeft="320px"
-        rating.style.marginTop="-50px"
-        rating.style.marginBottom="80px"
-
-       
-        var btn1 = document.createElement("button");
-        btn1.innerText = "REMOVE ITEM";
-        btn1.style.marginBottom="30px"
-        btn1.style.marginTop="20px"
-        btn1.style.marginLeft="48px"
-        btn1.style.backgroundColor="orange"
-        btn1.style.color="white"
-        btn1.style.fontSize="25px"
-        btn1.style.border="none"
-        btn1.style.padding="10px"
-       
-        btn1.addEventListener("click", function () {
-        removeItem(elem,index);
-        });
-        
-       var p1= document.createElement("p")
-       p1.innerText="#CM02GBGT1217 |27 Reviews  |"
-       p1.style.marginTop="-40px"
-       p1.style.marginLeft="35px"
-       p1.style.color="gray"
-       p1.style.fontSize="20px"
-       
-       var box4=document.createElement("div") 
+  var tr7 = document.createElement("tr")
+  var td11 = document.createElement("td")
+  td11.innerText = "Total Items"
+  td11.style.fontSize = "20px"
+  //  td12.style.fontWeight="bold"
+  var td12 = document.createElement("td")
+  td12.innerText = length
+  td12.style.fontSize = "20px"
+  //  td10.style.fontWeight="bold"
 
 
-       var p2= document.createElement("p")
-       p2.innerText="  ✓Paid Shipping   ✓Cash On Delivery  "
-       p2.style.marginLeft="40px"
-       p2.style.fontSize="25px"
-       p2.style.color="gray"
+  var tr6 = document.createElement("tr")
+  btn3 = document.createElement("button")
+  btn3.innerText = "PLACE ORDER"
+  btn3.style.width = "250px"
+  btn3.style.height = "50px"
+  btn3.style.fontSize = "20px"
+  btn3.style.color = "white"
+  btn3.style.backgroundColor = "red"
+  btn3.style.marginTop = "20px"
+  btn3.style.border = "none"
+  btn3.style.marginBottom = "20px"
 
-       var p3= document.createElement("p")
-       p3.innerText="Delivery 4 - 6 Working Days"
-       p3.style.marginLeft="50px"
-       p3.style.fontSize="25px"
-       p3.style.color="gray"
 
-        
-       var mrp=document.createElement("p")
-        mrp.innerText="MRP(incl GST)"
-        mrp.style.fontSize="20px"
-        mrp.style.marginTop="35px"
 
-       var btn2 = document.createElement("button");
-        btn2.innerText = "BUY NOW";
-        btn2.style.marginBottom="30px"
-        btn2.style.marginTop="20px"
-        btn2.style.marginLeft="30px"
-        btn2.style.backgroundColor="red"
-        btn2.style.color="white"
-        btn2.style.fontSize="25px"
-        btn2.style.border="none"
-        btn2.style.padding="10px"
-        btn2.style.width="200px"
-       
-       
-       
-        box4.append(p1,rating)
-        box3.append(mrp,price,strikedoffprice)
-        box1.append(image)
-        box2.append(name,box4,box3,p2,p3,btn1,btn2)
-        document.querySelector("#cart_container").append(box1,box2)
+  tr1.append(td1, td2)
+  tr2.append(td3, td4)
+  tr3.append(td5, td6)
+  tr4.append(td7, td8)
+  tr5.append(td9, td10)
+  tr6.append(btn3)
+  tr7.append(td11, td12)
+  document.querySelector("tbody").append(tr7, tr1, tr2, tr3, tr4, tr5, tr6)
 
-    })
-    function removeItem(elem,index) {
+
+
+  cartDataa.map(function (elem, index) {
+    var box1 = document.createElement("div")
+
+
+    var box2 = document.createElement("div")
+
+
+
+
+    var image = document.createElement("img")
+    image.src = elem.image_url
+    image.style.height = "500px"
+    image.style.width = "600px"
+    image.style.marginLeft = "35px"
+
+
+    var name = document.createElement("p")
+    name.innerText = elem.name
+    name.style.marginLeft = "30PX"
+    name.style.fontSize = "40px"
+    name.style.marginTop = "0px"
+
+
+    var box3 = document.createElement("div")
+    box3.setAttribute("id", "box3")
+
+
+
+    var price = document.createElement("p")
+    price.innerText = elem.price
+    price.style.fontSize = "28px"
+    price.style.color = "red"
+    price.style.marginLeft = "10px"
+
+    var strikedoffprice = document.createElement("p")
+    strikedoffprice.innerText = elem.strikedoffprice
+    strikedoffprice.style.textDecoration = "line-Through"
+    strikedoffprice.style.color = "gray"
+    strikedoffprice.style.fontSize = "28px"
+
+
+    var rating = document.createElement("img")
+    rating.src = elem.rating
+    rating.style.height = "30px"
+    rating.style.width = "130px"
+    rating.style.marginLeft = "320px"
+    rating.style.marginTop = "-50px"
+    rating.style.marginBottom = "80px"
+
+
+    var btn1 = document.createElement("button");
+    btn1.innerText = "REMOVE ITEM";
+    btn1.style.marginBottom = "30px"
+    btn1.style.marginTop = "20px"
+    btn1.style.marginLeft = "48px"
+    btn1.style.backgroundColor = "orange"
+    btn1.style.color = "white"
+    btn1.style.fontSize = "25px"
+    btn1.style.border = "none"
+    btn1.style.padding = "10px"
+
+    btn1.addEventListener("click", function () {
+      removeItem(elem, index);
+    });
+
+    var p1 = document.createElement("p")
+    p1.innerText = "#CM02GBGT1217 |27 Reviews  |"
+    p1.style.marginTop = "-40px"
+    p1.style.marginLeft = "35px"
+    p1.style.color = "gray"
+    p1.style.fontSize = "20px"
+
+    var box4 = document.createElement("div")
+
+
+    var p2 = document.createElement("p")
+    p2.innerText = "  ✓Paid Shipping   ✓Cash On Delivery  "
+    p2.style.marginLeft = "40px"
+    p2.style.fontSize = "25px"
+    p2.style.color = "gray"
+
+    var p3 = document.createElement("p")
+    p3.innerText = "Delivery 4 - 6 Working Days"
+    p3.style.marginLeft = "50px"
+    p3.style.fontSize = "25px"
+    p3.style.color = "gray"
+
+
+    var mrp = document.createElement("p")
+    mrp.innerText = "MRP(incl GST) ₹"
+    mrp.style.fontSize = "20px"
+    mrp.style.marginTop = "35px"
+
+    var btn2 = document.createElement("button");
+    btn2.innerText = "BUY NOW";
+    btn2.style.marginBottom = "30px"
+    btn2.style.marginTop = "20px"
+    btn2.style.marginLeft = "30px"
+    btn2.style.backgroundColor = "red"
+    btn2.style.color = "white"
+    btn2.style.fontSize = "25px"
+    btn2.style.border = "none"
+    btn2.style.padding = "10px"
+    btn2.style.width = "200px"
+
+
+
+    box4.append(p1, rating)
+    box3.append(mrp, price, strikedoffprice)
+    box1.append(image)
+    box2.append(name, box4, box3, p2, p3, btn1, btn2)
+    document.querySelector("#cart_container").append(box1, box2)
+
+  })
+  function removeItem(elem, index) {
     console.log(elem, index);
     cartDataa.splice(index, 1);
     console.log(cartDataa);
     localStorage.setItem("cart1", JSON.stringify(cartDataa));
-      window.location.reload();
+    window.location.reload();
   }
 
 </script>
