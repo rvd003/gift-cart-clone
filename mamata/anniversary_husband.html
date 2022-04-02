@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="https://www.giftcart.com/pub/media/favicon/stores/1/16x16.png">
+    
     <style>
        #Anniversary_husband_container{
          display: grid;
@@ -94,9 +96,65 @@
          }
 
         }
+
+        .float_button{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	/* background-color:#0C9; */
+  background-image: linear-gradient(to right, #f50b26 0%, #f9fdff  51%, #ff6e7f  100%);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+
+  transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+}
+
+
+
+
+
+.fa-cart-shopping{
+	margin-top:22px;
+}
+
+
+.float_button:hover
+{
+  background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+}
+
+
+
+#counter_num
+{
+  /* background-color: red; */
+ font-size: larger;
+ position: absolute;
+ top: -8px;
+ right: -5px;
+ width: 30px;
+ height: 30px;
+ background-color: #D31027;
+ border-radius: 50%;
+ 
+}
+
+
+
          
     </style>
 </head>
+
+<script src="https://kit.fontawesome.com/b5da1e4b3a.js" crossorigin="anonymous"></script>
 <body>
   <div id="upper">
     <img src="https://www.giftcart.com/pub/media/catattributes/default/new.jpg" alt=""/>
@@ -104,6 +162,10 @@
      <div class="sub2">Home / All Gifts</div>
 </div>
     <div id="Anniversary_husband_container"></div>
+    <a href="cart.html" class="float_button">
+  
+      <i class="fa-solid fa-cart-shopping"></i>
+      </a>
 </body>
 </html>
 
@@ -346,7 +408,15 @@ function addToCart(elem) {
   }
 
 
+  var ber=JSON.parse(localStorage.getItem("cart1")) || [];
 
+console.log(ber.length)
+
+badge=document.createElement("span");
+badge.innerText=ber.length;
+badge.setAttribute('id',"counter_num")
+
+document.querySelector('.float_button').append(badge)
 
 
  

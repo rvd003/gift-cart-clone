@@ -147,3 +147,86 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+
+
+
+
+var x=JSON.parse(localStorage.getItem('userDetails')) || [];
+
+
+
+
+
+
+
+if(x.length==0)
+{
+  setTimeout(() => {
+    window.location.href="#popup1"; 
+  }, 5000);
+}
+
+
+var customer_name=document.querySelector("#clicks").innerText;
+
+// console.log(customer_name)
+
+
+if(x.length==0)
+{
+  customer_name="Hello, Sign In"
+}
+else if(x.length>0)
+{
+  customer_name=x.name;
+  // console.log(customer_name)
+}
+
+
+if(x.length>0)
+{
+  x.map(function (element) {
+    // console.log(element.name)
+    
+  
+    
+   var span= document.createElement("span")
+   span.innerText=element.name;
+  
+   document.querySelector("#clicks").append(span);
+  
+  
+  })
+}
+else if(x.length==0)
+{
+  var spn=document.createElement("span")
+  span.innerText='Sign In';
+
+  document.querySelector("#clicks").append(spn);
+}
+
+
+
+
+
+
+// -------------------------------------------------------------floating cart-----
+
+var ber=JSON.parse(localStorage.getItem("cart1")) || [];
+
+console.log(ber.length)
+
+badge=document.createElement("span");
+badge.innerText=ber.length;
+badge.setAttribute('id',"counter_num")
+
+document.querySelector('.float_button').append(badge)
+
+
+
+
+
+

@@ -68,13 +68,13 @@
           <label for="">Pin Code</label>
           <input type="text" id="" />
           <label for="">Flat, House no., Building, Company, Apartment</label>
-          <input type="text" id="" />
+          <input type="text" id="house" />
           <label for="">Area, Street, Sector, Village</label>
-          <input type="text" />
+          <input type="text" id="area"/>
           <label for="">LandMark</label>
           <input type="text" />
           <label for="">City</label>
-          <input type="text" /><br /><br />
+          <input type="text" id="city" /><br /><br />
           <label for="">Country</label>
           <select name="" id="">
             <option value="India">India</option>
@@ -154,8 +154,25 @@
   <script>
     
 document.querySelector("#checkoutForm").addEventListener("submit",checkoutFun);
+     var name=document.querySelector('#name').value;
+     
+     var customer_data=[];
     function checkoutFun () {
       event.preventDefault();
+
+      var obj= 
+      {
+        Name:document.querySelector("#name").value,
+        house:document.querySelector('#house').value,
+        area:document.querySelector("#area").value,
+        city:document.querySelector("#city").value,
+
+      }
+
+      customer_data.push(obj)
+      localStorage.setItem("customer_details",JSON.stringify(customer_data))
+
+
     //  console.log("inside")
       window.location.href = "payment.html";
   

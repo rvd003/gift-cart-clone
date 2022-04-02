@@ -140,6 +140,7 @@
         </a>
       </div>
     </form>
+    <!-- <a href=""></a> -->
   </body>
   <script>
     document.querySelector("form").addEventListener("submit", loginFun);
@@ -159,7 +160,7 @@
           enteredPassword == regUsers[i].password
         ) {
           alert("Login Successful");
-          window.location.href = "index.html";
+          window.location.href = "../index.html";
           break;  
         } else {
           alert("Login Failed Please Enter Correct Data");

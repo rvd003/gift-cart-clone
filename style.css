@@ -171,6 +171,10 @@ a>span
     padding-bottom: 5px;
   }
 
+
+
+  /* --------------------------------------------------------------------------------------------------- */
+
   #searchBar
   {
       border: 1px  brown;
@@ -207,16 +211,6 @@ a>span
     transition: 0.2s ease;
 
   }
-
-
-
-
-
-
-
-
-
-
 
 
   
@@ -307,7 +301,7 @@ a>span
       background: linear-gradient(to right,#a20b6a,#d80806);
       color: white;
   }
-  /* ------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------------------- */
 
 
   .redMenu_container
@@ -322,32 +316,6 @@ a>span
       
   }
 /* --------------------------------- */
-
-  
-/* .btn-grad {background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)}
-.btn-grad {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
- }
-
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   /* color: #fff;
-   text-decoration: none;
- } */ 
-
-
-
-
-
 
 
   /* ---------------------------------------- */
@@ -471,7 +439,7 @@ a>span
       width: 25%;
   }
   
-
+/* ------------------------------------------------------------------------------------------------------------- */
   
   .carousel-item:hover ~a
   {
@@ -653,6 +621,117 @@ a>span
     text-decoration: line-through;
   }
   
+
+/* ----------------------------------------EXP------------------------------------- */
+
+
+/* h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+} */
+
+/* .box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+} */
+
+/* .button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+} */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  /* font-family: Tahoma, Arial, sans-serif; */
+  font-family: 'Bubblegum Sans', cursive;
+
+}
+.popup .content
+{
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
   .pre-btn,
   .nxt-btn {
     border: none;
@@ -847,6 +926,10 @@ a>span
 }
 
 
+
+
+/* ------------------------------------------------------------------------------------------ */
+
 .payment_img
 {
     border: 1px  maroon;
@@ -866,3 +949,58 @@ a>span
     background-color: rgb(44, 42, 42);
     height: 60px;
 }
+
+
+/* --------------------------------floating button------------------ */
+
+.float_button{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	/* background-color:#0C9; */
+  background-image: linear-gradient(to right, #f50b26 0%, #f9fdff  51%, #ff6e7f  100%);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+
+  transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+}
+
+
+
+
+
+.fa-cart-shopping{
+	margin-top:22px;
+}
+
+
+.float_button:hover
+{
+  background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+}
+
+
+
+#counter_num
+{
+  /* background-color: red; */
+ font-size: larger;
+ position: absolute;
+ top: -8px;
+ right: -5px;
+ width: 30px;
+ height: 30px;
+ background-color: #D31027;
+ border-radius: 50%;
+ 
+}
+

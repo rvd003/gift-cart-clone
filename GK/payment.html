@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment page</title>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <style>
  #paymentForm{
 width: 40%;
@@ -41,6 +43,17 @@ cursor: pointer;
 #secureimg >img{
     width: 500px;
 }
+#otp_button
+{
+    border: none;
+    padding: .5em 13em;
+    margin-left: 30%;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(245, 121, 121);
+    cursor: pointer;
+}
 
     </style>
    
@@ -67,14 +80,66 @@ cursor: pointer;
         
         </div><br><br>
         
-        <input type="submit" value="Proceed to Pay" id="paymentSubmit">
+        <input type="submit" value="Generate OTP" id="paymentSubmit">
     </form>
+
+    <button id="otp_button" onclick="move_on()">Proceed to Pay</button>
+
 </body>
 <script>
     document.querySelector("#paymentForm").addEventListener("submit",paymentPage)
-function paymentPage() {
-    event.preventDefault();
+    // x=JSON.parse(localStorage.getItem("customer_details"))
+    // console.log(x)
 
+    // for(let i=0; i<x.length; i++)
+    // {
+    //     a=(x[i]['Name'])
+    // }
+    // console.log(a)
+function paymentPage() {
+
+    event.preventDefault();
+    
+    let num='0123456789';
+    let OTP='';
+
+    for(let i=0; i<6; i++)
+    {
+        OTP+=num[Math.floor(Math.random()*10)];
+    }
+
+    localStorage.setItem("otp",JSON.stringify(OTP))
+
+    x=JSON.parse(localStorage.getItem("userDetails"));
+    
+    for(let i=0; i<x.length; i++)
+    {
+        mail=x[i]["email"];
+    }
+
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "writersboxx@gmail.com",
+    Password : "zggcxjhtldmgafmw",
+    To : mail,
+    From : "writersboxx@gmail.com",
+    Subject : "OTP Received:",
+    Body : "Your 6-digit OTP is "+OTP,
+}).then(
+  message => {
+      if(message=='OK')
+      {
+          alert("Check Your Registered mail")
+      }
+  }
+);
+
+
+    //
+}
+
+function move_on()
+{
     window.location.href="otp.html"
 }
 

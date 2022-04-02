@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track order</title>
+    <link rel="icon" type="image/x-icon" href="https://www.giftcart.com/pub/media/favicon/stores/1/16x16.png">
     <style>
     
 
@@ -32,22 +33,699 @@
 }
 
 
+
+/* --------------------------------------------------------- */
+
+#searchBar
+  {
+      border: 1px  brown;
+      display: grid;
+      /* grid-template-columns: 500px 800px 200px ; */
+      grid-template-columns: 0.5fr 1fr 0.5fr;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  
+
+  .items
+  {
+      border: 1px  black;
+      height: 100px;
+      text-align: center;
+  }
+
+  #search
+  {
+      margin-top: 35px;
+      padding: 12px 100px;
+      
+  }
+
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    z-index: 1;
+    background-color: red;
+    color: white;
+    left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 0.2s ease;
+
+  }
+
+
+  
+  .items>button
+  {
+      padding: 13px 8px;
+  }
+  .items a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .fa-magnifying-glass
+  {
+      font-size:15px;
+  }
+  
+ 
+  .container_track
+  {
+    display: inline;
+    border: 1px  red;
+    position: relative;
+    cursor: pointer;
+    margin-left: 30px;
+    border-radius: 47%;
+    width: 32px;
+    height: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    
+  }
+  #tooltipText
+  {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    white-space: nowrap;
+    padding: 5px 8px;
+    border-radius: 10px;
+    font-size: small;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  #tooltipText::before
+  {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 10px solid;
+    border-color: #000 #0000 #0000 #0000;
+  }
+
+  .container_track:hover #tooltipText
+  {
+    top: -230%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .container_track i{
+    font-size: xx-large;
+    color: rgb(97, 89, 89);
+    background-color: aliceblue;
+
+  }
+
+  #hatke_grid
+  {
+     width: 40%;
+     margin-top: 15px;
+  }
+  #gift
+  {
+      display: block;
+      padding: 4px 10px;
+      margin-left: 140px;
+      border-radius: 10px;
+      font-size: 12px;
+      background: linear-gradient(to right,#a20b6a,#d80806);
+      color: white;
+  }
+
+
+  .redMenu_container
+  {
+      max-width: 1530px;
+      margin: 0 auto;
+      border: 1px solid green;
+      background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)
+      
+      
+      
+      
+  }
+/* --------------------------------- */
+
+
+  /* ---------------------------------------- */
+
+  .redMenu_container a
+  {
+    color: white;
+    font-weight: 700;
+    font-size: .9em;
+  }
+
+  nav ul
+  {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+      
+  }
+  nav li
+  {
+      display: inline-block;
+      border: 1px  maroon;
+      margin-left: 8px;
+      height: 50px;
+     
+  }
+
+  nav li:hover
+  {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  .special_margin
+  {
+    margin-left: 80px;
+  }
+
+  nav a
+  {
+      text-decoration: none;
+      display: block;
+      padding: .75em 1.75em;
+  }
+
+
+
+  .sub_menu
+  {
+      position: absolute;
+      background: #eee8e8;
+      width: 80%;
+      display: none;
+      padding: 2em;
+      z-index: 1;
+  }
+
+
+  .inner_bg
+  {
+    border: 1px  orangered;
+    height: 100px;
+    width: 100px;
+  }
+
+  .menu-col-3 img
+  {
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+
+
+
+  nav li:hover .sub_menu
+  {
+      display: block;
+  }
+
+  .sub_menu li
+  {
+      display: block;
+      font-weight: small;
+      
+      
+  }
+
+  .sub_menu a
+  {
+      padding: 0;
+      margin-bottom: .25em;
+      color: #000;
+      font-weight: 500;
+  }
+  .sub_menu a:hover
+  {
+      color: red;
+  }
+
+  .CatMenu
+  {
+      margin: 2.5em 0 .5em;
+      color: red;
+
+  }
+
+  .CatMenu:first-of-type
+  {
+      margin-top: 0;
+  }
+
+  .menu-col-1,.menu-col-2,.menu-col-3,.menu-col-4, .menu-col-5, .menu-col-6, .menu-col-7
+  {
+      float: left;
+
+  }
+  .menu-col-1
+  {
+      width: 25%;
+  }
+  .menu-col-2, .menu-col-3, .menu-col-5, .menu-col-4
+  {
+      width: 25%;
+  }
+
+  .payment_img
+{
+    border: 1px  maroon;
+    height: 70px;
+    background-color:rgb(44, 42, 42) ;
+}
+
+.payment_img 
+{
+    text-align: center;
+}
+
+.copyright
+{
+    text-align: center;
+    color: white;
+    background-color: rgb(44, 42, 42);
+    height: 60px;
+}
+
+.order_details
+{
+    width: 60%;
+    margin: auto;
+}
+
+.order_last
+{
+    text-align: center;
+}
+.go_back a
+{
+    text-decoration: none;
+    color: white;
+}
+.go_back
+{
+    padding: 8px;
+    margin-left: 50%;
+    border: none;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+    transition: 0.5s;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+            display: block;
+            background-size: 200% auto;
+
+
+
+}
+.go_back:hover
+{
+    background-position: right center; /* change the direction of the change here */
+            color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
+
+
+    <div id="searchBar">
+        <div class="items">
+            <img id="logo" src="https://www.giftcart.com/pub/media/logo/stores/1/GC-logo.webp" alt="" srcset="">
+        </div>
+
+        <div class="items">
+            <!-- <input type="search" id="search" placeholder="Search entire store here...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></label></button> -->
+
+            
+
+            <div class="container_track">
+                <span id="tooltipText">Track your Order</span>
+                <a href=""> <i class="fa-solid fa-location-dot"></i></a>
+            </div>
+
+        </div>
+        <div class="items">
+            <img id="hatke_grid"
+                src="https://www.giftcart.com/pub/static/frontend/Mgs/molly/en_US/images/hatkegifts-logo.gif" alt=""
+                srcset="">
+            <button id="gift"><a href="Rohit/aLL.html">GIFT NOW</a> <i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+
+    </div>
+
+
+
+    <nav>
+        <div class="redMenu_container">
+            <ul class="main_menu">
+                <li class="special_margin"> <a href="">CATEGORIES <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="sub_menu">
+                        <!-- <div class="inner_bg"></div> -->
+                        <div class="menu-col-1">
+                            <H6 class="CatMenu">Top Gifts</H6>
+                            <ul>
+                                <li><a href="Rohit/baby.html">Baby</a> </li>
+                                <li><a href="">Beauty & Personal Care</a> </li>
+                                <li><a href="Rohit/homeandliving.html">Business & Executive Gifts</a> </li>
+                                <li><a href="Rohit/choclateandcookies.html">Chocolates & Cookies</a> </li>
+                                <li><a href="Rohit/homeandliving.html">Computer & Mobile Accessories</a> </li>
+
+                            </ul>
+                            <H6 class="CatMenu">Digital Gifts</H6>
+                            <ul>
+                                <li><a href="Rohit/homeandliving.html">Eco-Friendly</a> </li>
+                                <li><a href="Rohit/eventandsentiments.html">Experiential Gifts</a> </li>
+                                <li><a href="mamata/birthday_wife.html">Fashion & Style</a> </li>
+                                <li><a href="mamata/birthday Flower and Cakes.html">Flowers & Cakes</a> </li>
+                                <li><a href="Rohit/giftcart.html">Gift Cards</a> </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu-col-1">
+                            <H6 class="CatMenu">Hatke Gifts</H6>
+                            <ul>
+                                <li><a href="Rohit/homeandliving.html">Home & Living</a> </li>
+                                <li><a href="mamata/birthday_womensdata.html">Jewellery</a> </li>
+                                <li><a href="mamata/recipient_teen.html">Kids</a> </li>
+                                <li><a href="Rohit/valentines.html">Love & Romance</a> </li>
+                                <li><a href="Rohit/aLL.html">Zodiac Gifts</a> </li>
+
+
+                            </ul>
+                            <H6 class="CatMenu">Personalised Gifts</H6>
+                            <ul>
+                                <li><a href="Rohit/baby.html">Pet Gifts</a> </li>
+                                <li><a href="Flowers And Cakes/index.html">Religious Gifts</a> </li>
+                                <li><a href="Toy And Games/index.html">Soft Toys</a> </li>
+                                <li><a href="Toy And Games/index.html">Toys & Games</a> </li>
+                                <li><a href="ThankYou/index.html">Unique Gifts</a> </li>
+
+                            </ul>
+
+                        </div>
+                </li>
+                <li>
+                    <a href="">ANNIVERSARY <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="sub_menu">
+                        <div class="menu-col-2">
+                            <H6 class="CatMenu">Gifts By Recipients</H6>
+                            <ul>
+                                <li><a href="mamata/birthday_husband.html">Husband</a> </li>
+                                <li><a href="mamata/birthday_wife.html">Wife</a> </li>
+
+
+
+                        </div>
+                        <div class="menu-col-2">
+                            <H6 class="CatMenu">Gifts By Categories</H6>
+                            <ul>
+                                <li><a href="mamata/birthday Flower and Cakes.html">Flowers & Cakes</a> </li>
+                                <li><a href="Rohit/giftcart.html">Giftcards</a> </li>
+
+
+                            </ul>
+
+
+                        </div>
+                </li>
+
+                <li> <a href="">BIRTHDAY <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="sub_menu">
+                        <div class="menu-col-3">
+                            <H6 class="CatMenu">Gifts By Recipients</H6>
+                            <ul>
+                                <li><a href="mamata/recipient_man.html">Men</a> </li>
+                                <li><a href="mamata/recipient.women.html">Women</a> </li>
+                                <li><a href="mamata/recipient_teen.html">Teens</a> </li>
+                                <li><a href="Rohit/baby.html">Kids</a> </li>
+                                <li><a href="mamata/birthday_teens.html">Girlfriend</a> </li>
+
+                            </ul>
+                            <H6 class="CatMenu">Narrow Down</H6>
+                            <ul>
+                                <li><a href="mamata/birthday_husband.html">Husband</a> </li>
+                                <li><a href="mamata/birthday_wife.html">Wife</a> </li>
+                                <li><a href="mamata/recipient.women.html">Mom</a> </li>
+                                <li><a href="mamata/recipient_man.html">Dad</a> </li>
+                                <li><a href="mamata/birthday_womensdata.html">Sister</a> </li>
+
+                            </ul>
+
+
+                        </div>
+                        <div class="menu-col-3">
+                           <img src="https://www.giftcart.com/pub/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/c/m/cm08gbgt50405-2.jpg" alt="" srcset="">
+
+
+                        </div>
+                </li>
+
+
+                <li><a href="">VALENTINE'S DAY <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="sub_menu">
+                        <div class="menu-col-4">
+                            <H6 class="CatMenu"></H6>
+                            <ul>
+                                <li><a href="Rose Day/index.html">Rose Day</a> </li>
+                                <li><a href="Promise Day/index.html">Propose Day</a> </li>
+                                <li><a href="Rohit/choclateandcookies.html">Chocolate Day</a> </li>
+                                <li><a href="Rohit/baby.html">Teddy Day</a> </li>
+                                <li><a href="Promise Day/index.html">Promise Day</a> </li>
+                                <li><a href="Rohit/valentines.html">Hug Day</a> </li>
+                                <li><a href="Rohit/valentines.html">Kiss Day</a> </li>
+
+                            </ul>
+
+
+
+                        </div>
+                </li>
+                <li><a href="">PERSONLISED <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="sub_menu">
+                        <div class="menu-col-5">
+                            <H6 class="CatMenu">Lamps</H6>
+                            <ul>
+                                <li><a href="Rohit/valentines.html">Love Messages</a> </li>
+                                <li><a href="Rohit/homeandliving.html">Pillow Covers</a> </li>
+                                <li><a href="mamata/anniversary_personalisedgift.html">Passport Covers</a> </li>
+                                <li><a href="mamata/birthday_teens.html">Songs</a> </li>
+                                <li><a href="Rohit/giftcart.html">Teddy</a> </li>
+
+                            </ul>
+                            <H6 class="CatMenu">Mugs</H6>
+                            <ul>
+                                <li><a href="Rohit/eventandsentiments.html">Mouse Pads</a> </li>
+                                <li><a href="Rohit/homeandliving.html">Name Plates</a> </li>
+                                <li><a href="Rohit/homeandliving.html">Magazines</a> </li>
+                                <li><a href="mamata/recipient_man.html">Notebooks</a> </li>
+                                <li><a href="mamata/recipient_teen.html">Poster Frames</a> </li>
+
+                            </ul>
+                        </div>
+                        <div class="menu-col-5">
+                            <H6 class="CatMenu">Cushions</H6>
+                            <ul>
+                                <li><a href="Rohit/homeandliving.html">Couple Cushions</a> </li>
+                                <li><a href="Rohit/naughtygift.html">Create Your Own</a> </li>
+                                <li><a href="mamata/birthday_wife.html">Jewellery</a> </li>
+                                <li><a href="mamata/birthdayPersonalisedCard.html">Jigsaw Puzzles</a> </li>
+                                <li><a href="mamata/anniversary_personalisedgift.html">Keepsakes</a> </li>
+
+                            </ul>
+                            <H6 class="CatMenu">Mini Gifts</H6>
+                            <ul>
+                                <li><a href="Rohit/giftcart.html">Photo Frames</a> </li>
+                                <li><a href="mamata/anniversary_wife.html">Scrolls</a> </li>
+                                <li><a href="mamata/birthday_womensdata.html">Glass & Crystal</a> </li>
+                                <li><a href="Rohit/giftcart.html">Rock Slate</a> </li>
+                                <li><a href="mamata/birthdayPersonalisedCard.html">Key Chains</a> </li>
+
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li><a href="">RECIPIENT <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="sub_menu">
+                        <div class="menu-col-2">
+                            <H6 class="CatMenu"></H6>
+                            <ul>
+                                <li><a href="mamata/recipient_man.html">Men</a> </li>
+                                <li><a href="mamata/recipient.women.html">Women</a> </li>
+                                <li><a href="mamata/recipient_teen.html">Teens</a> </li>
+                                <li><a href="mamata/birthday_teens.html">Kids</a> </li>
+                                <li><a href="Rohit/baby.html">Babies</a> </li>
+                                <li><a href="Rohit/naughtygift.html">Boyfriend</a> </li>
+                                <li><a href="Rohit/naughtygift.html">Girlfriend</a> </li>
+                                <li><a href="mamata/birthday_husband.html">Husband</a> </li>
+                                <li><a href="mamata/birthday_wife.html">Wife</a> </li>
+                                <li><a href="Rohit/giftcart.html">Friend</a> </li>
+                                <li><a href="mamata/anniversary_wife.html">Mom</a> </li>
+                                <li><a href="mamata/anniversary_husband.html">Dad</a> </li>
+
+                            </ul>
+                            
+                        </div>
+                        
+                            
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <h1 id="orderh1">Order <span id="tracking">Tracking</span>   </h1>
   <form action="" id="trackOrderForm">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Order-Id">
+    <input id="order_email" type="email" placeholder="Email">
+    <input id="order_ID" type="text" placeholder="Order-Id">
     <input type="submit" id="trackOrderSubmit" >
   </form>
+
+  <button class="go_back"><a href="../index.html">Back to Home</a></button>
+
+  <div class="order_details">
+
+  </div>
+
+  
+
+
+  <div class="payment_img">
+
+    <img src="	https://www.giftcart.com/pub/static/frontend/Mgs/molly/en_US/images/payment1.png" alt="" srcset="">
+
+</div>
+
+<div class="copyright">
+    © 2012-2018 Giftcart.com. All Rights Reserved
+</div>
    
 </body>
 <script>
+    var orderArr=JSON.parse(localStorage.getItem('order_page')) ||[];
+    console.log(orderArr)
 document.querySelector("#trackOrderForm").addEventListener("submit", trackOrderFun)
+
 function trackOrderFun(){
     event.preventDefault();
-    window.location.href="trackStatus.html"
+//     window.location.href="trackStatus.html"
+x= document.querySelector('#order_email').value;
+   y= document.querySelector('#order_ID').value;
+
+    var obj=
+    {
+        email:x,
+        number:y
+    }
+    orderArr.push(obj)
+
+//    console.log(x,y)
+localStorage.setItem("order_page",JSON.stringify(orderArr))
+window.location.reload();
+
 }
+
+
+orderArr.map(function (element) {
+    var line=document.createElement("hr");
+    line.style.border="dotted";
+
+    var tr1=document.createElement('tr');
+
+    var order_title=document.createElement("td");
+    order_title.innerText="Order Number: ";
+    order_title.style.fontSize="larger";
+    order_title.style.fontWeight="bold";
+
+    var order_number=document.createElement("td")
+    order_number.innerText=element.number;
+
+
+    space=document.createElement('br');
+
+    var tr2=document.createElement("tr");
+
+    var order_mail=document.createElement('td');
+    order_mail.innerText='Order Email: ';
+    order_mail.style.fontSize="larger";
+    order_mail.style.fontWeight="bold";
+
+    var customer_mail=document.createElement("td")
+    customer_mail.innerText=element.email;
+
+    gap=document.createElement('br')
+
+    tr2.append(order_mail,customer_mail);
+
+    tr1.append(order_title,order_number)
+
+    p=document.createElement("p");
+    p.innerText="Your ordered items are packed and ready to be shipped and will reach you in 4-5 days.";
+
+    regards=document.createElement("p");
+    regards.innerText=`(Make sure you check the seal & be kind enough to Write a review about your product)`  
+
+    br=document.createElement("br");
+
+    span=document.createElement("p");
+    span.innerText="Thank You";
+    span.setAttribute("class","order_last")
+
+    last_line=document.createElement("hr")
+    last_line.style.border="dotted";
+
+    
+    
+
+    document.querySelector('.order_details').append(line,tr1,space,tr2,gap,p,regards,br,span,last_line);
+})
+
+  
+
+
 </script>
 </html>

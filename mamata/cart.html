@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="https://www.giftcart.com/pub/media/favicon/stores/1/16x16.png">
   <style>
     #cart_container {
       display: grid;
@@ -71,7 +72,7 @@
 
     </tbody>
   </table>
-
+  <!-- <a href=""></a> -->
 
 </body>
 
@@ -154,6 +155,10 @@
   btn3.style.marginTop = "20px"
   btn3.style.border = "none"
   btn3.style.marginBottom = "20px"
+  btn3.style.cursor="pointer";
+  btn3.addEventListener('click', function() {
+    window.location.href='../GK/checkout.html';
+  })
 
 
 
@@ -227,7 +232,8 @@
     btn1.style.color = "white"
     btn1.style.fontSize = "25px"
     btn1.style.border = "none"
-    btn1.style.padding = "10px"
+    btn1.style.padding = "10px";
+    btn1.style.cursor="pointer";
 
     btn1.addEventListener("click", function () {
       removeItem(elem, index);
@@ -272,6 +278,7 @@
     btn2.style.border = "none"
     btn2.style.padding = "10px"
     btn2.style.width = "200px"
+    btn2.style.cursor="pointer";
 
 
 
@@ -289,6 +296,7 @@
     localStorage.setItem("cart1", JSON.stringify(cartDataa));
     window.location.reload();
   }
+
 
 </script>
 

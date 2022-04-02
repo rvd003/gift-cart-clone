@@ -9,11 +9,17 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Gift Cart</title>
+    <link rel="icon" type="image/x-icon" href="https://www.giftcart.com/pub/media/favicon/stores/1/16x16.png">
 </head>
 <link rel="stylesheet" href="style.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
 
 <script src="https://kit.fontawesome.com/b5da1e4b3a.js" crossorigin="anonymous"></script>
+
 
 <body>
     <!-- --------------------------------- -->
@@ -42,16 +48,16 @@
                 </div>
             </div>
             <div class="helloContainer">
-                <a href="#Si" onclick="myfun()" id="clicks">Hello, Sign In <i class="fa-solid fa-angle-down"></i></a>
+                <a href="#Si" onclick="myfun()" id="clicks">Hello, </a>
                 <div id="content" class="dropdown_content">
-                    <a href="#"><span>My Account</span> </a>
-                    <a href="#"><span>My Orders</span> </a>
-                    <a href="#"><span>My Wish List</span> </a>
-                    <a href="#"><span>Sign Out</span> </a>
+                    <a href="mamata/cart.html"><span>My Account</span> </a>
+                    <a href="GK/trackOrder.html"><span>My Orders</span> </a>
+                    
+                    
                 </div>
             </div>
-            <div><a target="blank" href="mamata/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
-
+            <div id="khali_cart"><a target="blank" href="mamata/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
             <div id="large">
 
                 <span onclick="openNav()">&#9776; </span>
@@ -77,7 +83,7 @@
             </div>
         </div>
     </div>
-
+<!-- ----------------------------------------------SEARCH BAR--------------------------------------------------------------------- -->
     <div id="searchBar">
         <div class="items">
             <img id="logo" src="https://www.giftcart.com/pub/media/logo/stores/1/GC-logo.webp" alt="" srcset="">
@@ -85,13 +91,13 @@
 
         <div class="items">
             <input type="search" id="search" placeholder="Search entire store here...">
-            <button><i class="fa-solid fa-magnifying-glass"></i></label></button>
+            <button id="search_btn"><i class="fa-solid fa-magnifying-glass"></i></label></button>
 
             
 
             <div class="container_track">
                 <span id="tooltipText">Track your Order</span>
-                <a href=""> <i class="fa-solid fa-location-dot"></i></a>
+                <a href="GK/trackOrder.html"> <i class="fa-solid fa-location-dot"></i></a>
             </div>
 
         </div>
@@ -103,6 +109,9 @@
         </div>
 
     </div>
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------NAV BAR-------------------------------------------------------------------- -->
     <nav>
         <div class="redMenu_container">
             <ul class="main_menu">
@@ -304,7 +313,42 @@
         </div>
     </nav>
 
+<!-- --------------------------------------------------------------------------------------------------- ----------------------->
 
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Hey pal,</h2>
+        <img src="https://i.pinimg.com/originals/30/1b/78/301b780d487e84b2614c85497c75d07d.gif" alt="" srcset="">
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+            <br>
+		
+      Good to see you... <br> <br> I would suggest you to go for a quick login so that you can have a smooth experience while shopping and saving your items to purchase it later. 
+
+      <!-- <br> -->
+      <p>Click here to SignUp </p> 
+      <a href="GK/login.html">--------Here---------</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -652,7 +696,12 @@
 
 
 
+    <!-- ---------------------------------------------------------FLOATING BUTTON------------------------------------ -->
 
+    <a href="mamata/cart.html" class="float_button">
+  
+        <i class="fa-solid fa-cart-shopping"></i>
+        </a>
 
 
 
@@ -673,6 +722,8 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!-- ------------------- -->
+    
+
 
 </body>
 
