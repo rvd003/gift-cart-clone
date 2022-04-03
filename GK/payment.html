@@ -120,16 +120,16 @@ function paymentPage() {
     Email.send({
     Host : "smtp.gmail.com",
     Username : "writersboxx@gmail.com",
-    Password : "zggcxjhtldmgafmw",
+    Password : "kbphbgfhmyjilrzw",
     To : mail,
     From : "writersboxx@gmail.com",
     Subject : "OTP Received:",
     Body : "Your 6-digit OTP is "+OTP,
 }).then(
-  message => {
-      if(message=='OK')
+    message => {
+      if(message=="OK")
       {
-          alert("Check Your Registered mail")
+          alert("Check Your Registered Mail, for OTP")
       }
   }
 );
