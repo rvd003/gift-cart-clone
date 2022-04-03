@@ -31,3 +31,7 @@ This is working project which receieves otp and order confirmation to the regist
 
 ![App Screenshot](screen.png)
 
+
+## Blog
+
+-[Blog](https://hemanth-html.tumblr.com/post/680515939763208192/project-giftcartcomclone-version)
