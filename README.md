@@ -26,3 +26,8 @@ This is working project which receieves otp and order confirmation to the regist
 - Shopping cart Login and signup
 - Order Details sent to your mail ID
 
+
+## Screenshots
+
+![App Screenshot](screen.png)
+
